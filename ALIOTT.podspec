@@ -4,12 +4,12 @@ Pod::Spec.new do |s|
   s.authors      = "Ali Mobile Ecosystem"
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
-  s.homepage     = "https://webgit.taxidayroi.vn/super-app/ios-ali-cmm-sdk"
+  s.homepage     = "https://ali.vn"
   s.license      = 'LICENSE'
   s.xcconfig = { "ALIOTT_SDK_VERSION" => s.version }
 
   s.source   = {
-    :git => "https://hohaivu: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@github.com/Ali-Corp/AliOTT.git",
+    :git => "https://github.com/Ali-Corp/AliOTT.git",
     :tag => 'v' + s.version.to_s
   }
   s.documentation_url = "https://developer.ali.vn"
