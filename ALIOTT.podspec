@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
   s.homepage     = "https://ali.vn"
-  s.license      = 'LICENSE'
+  s.license      = 'iOS/LICENSE'
   s.xcconfig = { "ALIOTT_SDK_VERSION" => s.version }
 
   s.source   = {
