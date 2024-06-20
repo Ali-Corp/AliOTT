@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.xcconfig = { "ALIOTT_SDK_VERSION" => s.version }
 
   s.source   = {
-    :git => "https://github.com/Ali-Corp/AliOTT.git",
+    :git => "https://hohaivu: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@github.com/Ali-Corp/AliOTT.git",
     :tag => 'v' + s.version.to_s
   }
   s.documentation_url = "https://developer.ali.vn"
