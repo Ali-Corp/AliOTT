@@ -20,12 +20,12 @@ Pod::Spec.new do |s|
   s.subspec 'Hotline' do |hotline|
     hotline.vendored_frameworks = [
       "iOS/ALIOTTHotline.xcframework",
+      "iOS/Starscream.xcframework",
     ]
     hotline.resource_bundle = {
         "ALIOTTHotline" => ["iOS/resources/*.mp3"],
     }
     hotline.dependency 'WebRTC-lib', '113.0.0'
-    hotline.dependency 'Starscream', '~> 3.1'
     hotline.dependency 'SwiftyJSON', '~> 5.0'
 
     hotline.frameworks = [
