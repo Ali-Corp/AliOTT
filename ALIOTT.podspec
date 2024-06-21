@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ALIOTT'
-  s.version      = '1.0.2'
+  s.version      = '1.0.3'
   s.authors      = "Ali Mobile Ecosystem"
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
@@ -22,6 +22,9 @@ Pod::Spec.new do |s|
       "iOS/ALIOTTHotline.xcframework",
       "iOS/Starscream.xcframework",
     ]
+    hotline.resource = "iOS/Starscream.xcframework"
+    hotline.xcconfig = { 'LD_RUNPATH_SEARCH_PATHS' => '@loader_path/../Frameworks' }
+
     hotline.resource_bundle = {
         "ALIOTTHotline" => ["iOS/resources/*.mp3"],
     }
