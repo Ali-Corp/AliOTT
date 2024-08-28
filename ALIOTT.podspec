@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ALIOTT'
-  s.version      = '1.0.4'
+  s.version      = '1.0.5'
   s.authors      = "Ali Mobile Ecosystem"
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
@@ -16,6 +16,27 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '14.0'
   s.static_framework = true
   s.swift_versions = [5.0, 5.3, 5.4]
+
+  s.subspec 'Full' do |full|
+    full.vendored_frameworks = [
+      "iOS/ALIOTT.xcframework",
+      "iOS/Starscream.xcframework",
+    ]
+    full.resource_bundle = {
+        "ALIOTT" => ["iOS/resources/*.mp3"],
+    }
+
+    full.dependency 'WebRTC-lib', '113.0.0'
+    full.dependency 'SwiftyJSON', '~> 5.0'
+
+    full.frameworks = [
+      "UIKit",
+      "Foundation",
+      "AVFoundation",
+      "CallKit",
+      "PushKit"
+    ]
+  end
 
   s.subspec 'Hotline' do |hotline|
     hotline.vendored_frameworks = [
