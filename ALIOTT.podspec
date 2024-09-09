@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ALIOTT'
-  s.version      = '1.0.6-dev.4'
+  s.version      = '1.0.6-dev.5'
   s.authors      = "Ali Mobile Ecosystem"
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
