@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     "iOS/Starscream.xcframework"
   ]
   s.resource_bundle = {
-    "ALIOTT" => ["iOS/resources/*.mp3", "iOS/resources/*.png", "iOS/resources/localizations/**/*"],
+    "ALIOTT" => ["iOS/resources/sounds/*.mp3", "iOS/resources/images/*.png", "iOS/resources/localizations/**/*"],
   }
 
   s.dependency 'WebRTC-lib', '113.0.0'
