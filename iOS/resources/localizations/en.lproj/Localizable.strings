@@ -4,4 +4,6 @@
 "btn_message" = "Message";
 "lb_call_status_calling" = "Calling you...";
 "lb_call_status_connecting" = "Connecting...";
-"lb_call_status_call_ended" = "Call Ended";
+"lb_call_status_disconnect" = "Lóst connection";
+"lb_call_status_call_ended" = "Call End";
+"lb_call_status_call_refused" = "Call Refused";

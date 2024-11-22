@@ -4,4 +4,6 @@
 "btn_message" = "Tin nhắn";
 "lb_call_status_calling" = "Đang gọi...";
 "lb_call_status_connecting" = "Đang kết nối...";
+"lb_call_status_disconnect" = "Mất kết nối";
 "lb_call_status_call_ended" = "Kết thúc";
+"lb_call_status_call_refused" = "Cuộc gọi bị từ chối";
