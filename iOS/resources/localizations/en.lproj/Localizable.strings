@@ -2,7 +2,8 @@
 "btn_mute" = "Mic";
 "btn_speaker" = "Speaker";
 "btn_message" = "Message";
-"lb_call_status_calling" = "Calling you...";
+"lb_call_status_ringing" = "Ringing...";
+"lb_call_status_calling" = "Calling...";
 "lb_call_status_connecting" = "Connecting...";
 "lb_call_status_disconnect" = "Lóst connection";
 "lb_call_status_call_ended" = "Call End";

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ALIOTT'
-  s.version      = '1.1.4'
+  s.version      = '1.1.5'
   s.authors      = "Ali Mobile Ecosystem"
   s.summary      = "Ali OTT SDK"
   s.description  = "This open-source library allows you to integrate Call OTT into your iOS applications."
@@ -15,24 +15,48 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '12.0'
   s.static_framework = true
-  s.swift_versions = [5.0, 5.3, 5.4]
+  s.swift_versions = [5.0, 5.3, 5.4, 6.0]
 
-  s.vendored_frameworks = [
-    "iOS/ALIOTT.xcframework",
-    "iOS/Starscream.xcframework"
-  ]
-  s.resource_bundle = {
-    "ALIOTT" => ["iOS/resources/sounds/*.mp3", "iOS/resources/images/*.png", "iOS/resources/localizations/**/*"],
-  }
+  s.subspec 'ALI' do |ali|
+    ali.dependency 'WebRTC-lib', '113.0.0'
 
-  s.dependency 'WebRTC-lib', '113.0.0'
-  s.dependency 'SwiftyJSON', '~> 5.0'
+    ali.frameworks = [
+      "UIKit",
+      "Foundation",
+      "AVFoundation",
+      "CallKit",
+      "PushKit"
+    ]
+    ali.vendored_frameworks = [
+      "iOS/Starscream.xcframework",
+      "iOS/SwiftyJSON.xcframework",
+      "iOS/ALIOTT.xcframework",
+    ]
+    ali.resource_bundle = {
+      "ALIOTT" => ["iOS/resources/sounds/*.mp3"],
+    }
+  end
 
-  s.frameworks = [
-    "UIKit",
-    "Foundation",
-    "AVFoundation",
-    "CallKit",
-    "PushKit"
-  ]
+  s.subspec 'XanhSM' do |xsm|
+    xsm.dependency 'WebRTC-lib', '113.0.0'
+
+    xsm.frameworks = [
+      "UIKit",
+      "Foundation",
+      "AVFoundation",
+      "CallKit",
+      "PushKit"
+    ]
+
+    xsm.vendored_frameworks = [
+      "iOS/Starscream.xcframework",
+      "iOS/SwiftyJSON.xcframework",
+      "iOS/ALIOTT.xcframework",
+      "iOS/ALIOTTXanhSMUIKit.xcframework",
+    ]
+    xsm.resource_bundle = {
+      "ALIOTT" => ["iOS/resources/sounds/*.mp3"],
+      "ALIOTTXanhSM" => ["iOS/resources/images/*.png", "iOS/resources/localizations/**/*"],
+    }
+  end
 end

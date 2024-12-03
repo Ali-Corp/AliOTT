@@ -2,6 +2,7 @@
 "btn_mute" = "Mic";
 "btn_speaker" = "Loa";
 "btn_message" = "Tin nhắn";
+"lb_call_status_ringing" = "Đang đổ chuông...";
 "lb_call_status_calling" = "Đang gọi...";
 "lb_call_status_connecting" = "Đang kết nối...";
 "lb_call_status_disconnect" = "Mất kết nối";
